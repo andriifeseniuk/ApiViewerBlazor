@@ -10,11 +10,13 @@ namespace ApiViewerBlazor.Pages
     {
         private IEnumerable<ShowViewModel> shows = new ShowViewModel[0];
 
-        protected override async Task OnInitializedAsync()
+        public string FetchUrl { get; set; }
+
+        private async Task OnLoadClick()
         {
             try
             {
-                var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:5254/api/show");
+                var request = new HttpRequestMessage(HttpMethod.Get, FetchUrl);
                 var client = new HttpClient();
                 var response = await client.SendAsync(request);
                 if (response.IsSuccessStatusCode)
@@ -29,7 +31,7 @@ namespace ApiViewerBlazor.Pages
             }
         }
 
-        private static List<ShowViewModel> FetchShows(string responseString)
+        private List<ShowViewModel> FetchShows(string responseString)
         {
             return JsonSerializer.Deserialize<ShowDto[]>(
                     responseString,

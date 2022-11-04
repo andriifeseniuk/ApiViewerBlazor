@@ -1,5 +1,6 @@
 ﻿@page "/fetchdata"
 @using ApiViewerBlazor.DTO
+
 @inject HttpClient Http
 
 <PageTitle>Fetch Shows Api Data</PageTitle>
@@ -12,6 +13,10 @@
 }
 else
 {
+    <div class="fetch-buttons">
+        <input type="text" @bind-value="@FetchUrl" width="400px"/>
+        <button @onclick="OnLoadClick">Load</button>
+    </div>
     <div class="shows-container">
         <div class="shows-header">
             <div>Id</div>
