@@ -1,0 +1,58 @@
+﻿.shows-header {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: lightgrey;
+}
+
+.shows-row {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.shows-row {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.shows-row-container:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+.shows-cell-cast-expander {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1px;
+    border: none;
+}
+
+.shows-row-details-expanded {
+    display: block;
+}
+
+.shows-row-details-collapsed {
+    display: none;
+}
+
+.casts-container {
+    padding-left: 100px;
+    background-color: white;
+}
+
+.casts-header {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: lightgrey;
+}
+
+.casts-row {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.casts-row-container:nth-child(even) {
+    background-color: whitesmoke;
+}
